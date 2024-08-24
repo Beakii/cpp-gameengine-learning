@@ -32,15 +32,15 @@ LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wParam, LPARAM lP
 /*  Windows Operations                  */
 /* ------------------------------------ */
 #pragma region Windows Operations
-int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
-
-	IntializeGlobalVaraibles();
-	CreateWindowClass();
-	InitializeWindow();
-	WaitForClose();
-
-	return 0;
-}
+//int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
+//
+//	IntializeGlobalVaraibles();
+//	CreateWindowClass();
+//	InitializeWindow();
+//	WaitForClose();
+//
+//	return 0;
+//}
 
 LRESULT CALLBACK WindowProcess(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
 
@@ -104,13 +104,7 @@ void InitializeWindow() {
 }
 
 void WaitForClose() {
-	MSG msg = { 0 };
-	while (msg.message != WM_QUIT) {
-		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
-	}
+
 }
 #pragma endregion
 /* ------------------------------------ */
