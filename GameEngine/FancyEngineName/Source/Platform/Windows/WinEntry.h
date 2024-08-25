@@ -5,7 +5,12 @@ extern IApplication* CreateApplication();
 
 int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
 
+	PerGameSettings gameSettings;
+
 	auto app = CreateApplication();
+	app->SetupGame();
+
+	Logger logger;
 	app->Initialize();
 
 	MSG msg = { 0 };

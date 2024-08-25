@@ -12,14 +12,26 @@ Application::~Application()
 {
 }
 
+void Application::SetupGame()
+{
+	PerGameSettings::SetGameName(IDS_PERGAMENAME);
+	PerGameSettings::SetShortName(IDS_SHORTNAME);
+	PerGameSettings::SetGameIcon(IDI_MAIN_ICON);
+}
+
 void Application::Initialize()
 {
-	MessageBox(NULL, L"Hello World!", L"Hello", MB_OK);
+	Logger::PrintDebugSeperator();
+	Logger::Log(L"Initializing Application...\n");
+	Logger::Log(L"Game Name: %s\n", PerGameSettings::GameName());
+	Logger::Log(L"Boot Time: %s\n", Time::GetDateTime().c_str());
+	Logger::PrintDebugSeperator();
+
+	Logger::StartMTail();
 }
 
 void Application::Update()
 {
-	MessageBox(NULL, L"Loop", L"Hello", MB_OK);
 }
 
 void Application::Shutdown()

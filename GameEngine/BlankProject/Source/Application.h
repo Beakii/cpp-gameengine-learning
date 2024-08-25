@@ -8,6 +8,7 @@ public:
 	~Application();
 
 public:
+	void SetupGame();
 	void Initialize();
 	void Update();
 	void Shutdown();
