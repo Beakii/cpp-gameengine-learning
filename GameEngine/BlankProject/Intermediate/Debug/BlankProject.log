@@ -1,2 +1,5 @@
-﻿  Application.cpp
+﻿          1 file(s) copied.
+  Application.cpp
+  WinMain.cpp
+  pch.cpp
   BlankProject.vcxproj -> C:\Users\seknz\Desktop\GameEngine\GameEngine\Build\BlankProject\Debug\BlankProject.exe

@@ -1,7 +1,9 @@
 #include "Engine.h"
-#include "IApplication.h"
 
-extern IApplication* CreateApplication();
+#include "IApplication.h"
+#include "Common/CmdLineArgs.h"
+
+extern Win32::IApplication* CreateApplication();
 
 int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
 
@@ -9,6 +11,8 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT) {
 
 	auto app = CreateApplication();
 	app->SetupGame();
+
+	CmdLineArgs::ReadArguments();
 
 	Logger logger;
 	app->Initialize();
