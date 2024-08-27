@@ -11,6 +11,11 @@ namespace EngineConfig {
 	};
 
 	extern OEngine g_FancyEngine;
+
+	void FANCY_ENGINE_API SetMode(EngineMode mode);
+	EngineMode FANCY_ENGINE_API GetMode();
+
+	std::wstring FANCY_ENGINE_API EngineModeToString();
 }
 
 using namespace EngineConfig;
@@ -21,4 +26,8 @@ public:
 
 private: 
 	EngineMode m_engineConfig;
+
+public:
+	EngineMode GetEngineMode();
+	void SetEngineMode(EngineMode mode);
 };

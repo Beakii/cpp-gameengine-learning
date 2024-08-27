@@ -92,7 +92,11 @@
     <ClCompile Include="Source\Engine.cpp" />
     <ClCompile Include="Source\Engine\OEngine.cpp" />
     <ClCompile Include="Source\Engine\Simulation.cpp" />
+    <ClCompile Include="Source\Engine\SplashScreen.cpp" />
     <ClCompile Include="Source\Platform\Windows\IApplication.cpp" />
+    <ClCompile Include="Source\Platform\Windows\SubObject.cpp" />
+    <ClCompile Include="Source\Platform\Windows\Window.cpp" />
+    <ClCompile Include="Source\Platform\Windows\WindowsUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Common\CmdLineArgs.h" />
@@ -105,7 +109,11 @@
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\Engine\OEngine.h" />
     <ClInclude Include="Source\Engine\Simulation.h" />
+    <ClInclude Include="Source\Engine\SplashScreen.h" />
     <ClInclude Include="Source\Platform\Windows\IApplication.h" />
+    <ClInclude Include="Source\Platform\Windows\SubObject.h" />
+    <ClInclude Include="Source\Platform\Windows\Window.h" />
+    <ClInclude Include="Source\Platform\Windows\WindowsUtils.h" />
     <ClInclude Include="Source\Platform\Windows\WinEntry.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

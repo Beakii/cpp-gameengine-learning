@@ -2,6 +2,32 @@
 
 namespace EngineConfig {
 	OEngine g_FancyEngine;
+
+	void SetMode(EngineMode mode)
+	{
+		g_FancyEngine.SetEngineMode(mode);
+	}
+
+	EngineMode GetMode() {
+		return g_FancyEngine.GetEngineMode();
+	}
+
+	std::wstring EngineModeToString()
+	{
+		switch (g_FancyEngine.GetEngineMode())
+		{
+		case EngineMode::DEBUG:
+			return L"DEBUG";
+		case EngineMode::RELEASE:
+			return L"RELEASE";
+		case EngineMode::EDITOR:
+			return L"EDITOR";
+		case EngineMode::SERVER:
+			return L"SERVER";
+		default:
+			return L"NONE";
+		}
+	}
 }
 
 OEngine::OEngine()
@@ -15,4 +41,14 @@ OEngine::OEngine()
 
 OEngine::~OEngine()
 {
+}
+
+EngineMode OEngine::GetEngineMode()
+{
+	return m_engineConfig;
+}
+
+void OEngine::SetEngineMode(EngineMode mode)
+{
+	m_engineConfig = mode;
 }
