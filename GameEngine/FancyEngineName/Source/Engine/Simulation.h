@@ -7,6 +7,8 @@ namespace Engine {
 	public:
 		Simulation();
 		~Simulation();
+
+		virtual void PreInitialize() override;
 	
 	};
 }

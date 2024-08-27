@@ -10,6 +10,7 @@ namespace Win32 {
 
 	public:
 		virtual void SetupGame() = 0;
+		virtual void PreInitialize() = 0;
 		virtual void Initialize() = 0;
 		virtual void Update() = 0;
 		virtual void Shutdown() = 0;

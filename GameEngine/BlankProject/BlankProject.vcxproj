@@ -56,7 +56,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile>BlankProject.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>C:\Users\seknz\Desktop\GameEngine\GameEngine\BlankProject\Source;C:\Users\seknz\Desktop\GameEngine\GameEngine\FancyEngineName\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -76,6 +76,8 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\seknz\Desktop\GameEngine\GameEngine\BlankProject\Source;C:\Users\seknz\Desktop\GameEngine\GameEngine\FancyEngineName\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>BlankProject.h</PrecompiledHeaderFile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -88,13 +90,11 @@
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Application.cpp" />
-    <ClCompile Include="Source\pch.cpp" />
+    <ClCompile Include="Source\BlankProject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Source\Application.h" />
-    <ClInclude Include="Source\pch.h" />
+    <ClInclude Include="Source\BlankProject.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BlankProject.rc" />

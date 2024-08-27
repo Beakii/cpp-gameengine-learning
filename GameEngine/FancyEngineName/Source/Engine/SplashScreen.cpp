@@ -53,7 +53,7 @@ LRESULT SplashWindow::MessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPA
 
 		hdc = BeginPaint(hWnd, &ps);
 
-		Win32::Utils::AddBitmap(L"..\\FancyEngineName\\Content\\Images\\SplashScreen.bmp", hdc, 0, 0);
+		Win32::Utils::AddBitmap(PerGameSettings::GameSplashURL(), hdc, 0, 0);
 
 		SetBkMode(hdc, TRANSPARENT);
 		SetTextColor(hdc, RGB(255, 255, 255));
