@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\seknz\Desktop\GameEngine\GameEngine\Build\FancyEngineName\Debug\FancyEngineName.dll</FullPath>
+      <FullPath>C:\Users\seknz\Desktop\GameEngine\GameEngine\Build\Debug\FancyEngineName.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\seknz\Desktop\GameEngine\GameEngine\Build\BlankProject\Debug\BlankProject.exe</FullPath>
+      <FullPath>C:\Users\seknz\Desktop\GameEngine\GameEngine\Build\Debug\BlankProject.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

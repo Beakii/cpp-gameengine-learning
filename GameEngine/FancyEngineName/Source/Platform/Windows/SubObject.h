@@ -13,9 +13,7 @@ namespace Win32 {
 	protected:
 		static		LRESULT CALLBACK	SetupMessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 		static		LRESULT				AssignMessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-		virtual		LRESULT				CommonMessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
-
-		virtual		LRESULT				MessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) = 0;
+		virtual		LRESULT				MessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 	protected:
 		std::wstring	m_Class;
@@ -24,6 +22,9 @@ namespace Win32 {
 		HWND			m_Handle;
 
 	public:
-		HWND GetHandle() const { return m_Handle; }
+		HWND Handle() const { return m_Handle; }
+
+	public:
+		void Handle(HWND hWnd) { m_Handle = hWnd; }
 	};
 }

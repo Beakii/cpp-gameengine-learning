@@ -20,7 +20,7 @@ namespace Win32 {
 		wcex.cbWndExtra = 0;
 
 		wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
-		wcex.hbrBackground = (HBRUSH)(CreateSolidBrush(RGB(46, 46, 46)));
+		wcex.hbrBackground = (HBRUSH)(CreateSolidBrush(RGB(36, 36, 36)));
 
 		wcex.hIcon = m_Icon;
 		wcex.hIconSm = m_Icon;
@@ -42,6 +42,7 @@ namespace Win32 {
 			Win32::SubObject* const pWnd = static_cast<Win32::SubObject*>(pCreate->lpCreateParams);
 			SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(pWnd));
 			SetWindowLongPtr(hWnd, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(&Win32::SubObject::AssignMessageHandler));
+			pWnd->Handle(hWnd);
 			return pWnd->MessageHandler(hWnd, message, wParam, lParam);
 		}
 
@@ -53,9 +54,8 @@ namespace Win32 {
 		return pWnd->MessageHandler(hWnd, message, wParam, lParam);
 	}
 
-	LRESULT SubObject::CommonMessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
+	LRESULT SubObject::MessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) {
 		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
-
 }
 
