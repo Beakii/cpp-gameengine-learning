@@ -9,6 +9,5 @@ namespace Engine {
 		virtual void PreInitialize() override;
 
 		virtual LRESULT MessageHandler(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) override;
-	
 	};
 }

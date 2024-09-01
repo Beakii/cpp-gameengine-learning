@@ -10,6 +10,7 @@
 #ifdef WIN32
 	#include "Platform/Windows/WindowsUtils.h"
 	#include "Platform/Windows/SubObject.h"
+	#include "Platform/Windows/w32Caption.h"
 	#include "Platform/Windows/Window.h"
 	#include "Platform/Windows/IApplication.h"
 #endif
